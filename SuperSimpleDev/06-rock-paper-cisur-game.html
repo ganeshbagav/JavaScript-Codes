@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+    <button
+      onclick="
+        
+        console.log(makeCompMove())
+    "
+    >
+      Random
+    </button>
+
+    <button
+      onclick="
+      
+        compMove = makeCompMove();
+      
+        if(compMove==1){
+            result = 'tie';
+            compMove='rock';
+        } else if(compMove==2){
+            result = 'lose';
+            compMove='paper';
+        }else{
+            result = 'won';
+            compMove='scissor';
+        }
+        alert(`you picked rock computer picked ${compMove}. Result ${result}`)
+    "
+    >
+      Rock
+    </button>
+
+    <button
+      onclick="
+      compMove = makeCompMove();
+      
+
+      if(compMove==1){
+          result = 'won';
+          compMove='rock';
+      } else if(compMove==2){
+          result = 'tie';
+          compMove='paper';
+      }else{
+          result = 'lose';
+          compMove='scissor';
+      }
+      alert(`you picked paper computer picked ${compMove}. Result ${result}`)
+  "
+    >
+      Paper
+    </button>
+
+    <button
+      onclick="
+    compMove = makeCompMove();
+    if(compMove==1){
+        result = 'lose';
+        compMove='rock';
+    } else if(compMove==2){
+        result = 'won';
+        compMove='paper';
+    }else{
+        result = 'tie';
+        compMove='scissor';
+    }
+    alert(`you picked scissor computer picked ${compMove}. Result ${result}`)
+"
+    >
+      Scissor
+    </button>
+
+    <script>
+      let compMove = 0;
+      let result = "";
+
+      const meg = false && "hello";
+      console.log(meg);
+
+      function makeCompMove() {
+        compMove = Math.random() * (3 - 1) + 1;
+        compMove = Math.round(compMove);
+
+        return compMove;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <h3>Shopping Cart</h3>
+    <button
+      onclick=" 
+        console.log(`Cart Count : ${a}`)
+    "
+    >Show Cart</button>
+    <button
+      onclick="
+            a++;
+        console.log(`Cart Count : ${a}`)
+        "
+    >Add Item</button>
+    <button
+      onclick="
+            a=0;
+        console.log(`Cart Count : ${a}`)
+        "
+    >Reset Cart</button>
+    <button
+      onclick="
+        a++;
+        a++;
+        console.log(`Cart Count : ${a}`);
+        "
+    >+2</button>
+
+    <script>
+      let a = 0;
+    </script>
+  </body>
+</html>
