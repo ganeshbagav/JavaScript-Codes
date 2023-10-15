@@ -16,3 +16,8 @@ console.log(null);
 console.log(undefined);
 
 console.log(typeof c);
+console.log('Bigint example');
+let bigintExample = 5614
+console.log(typeof bigintExample);
+bigintExample = 5614n
+console.log(typeof bigintExample);
