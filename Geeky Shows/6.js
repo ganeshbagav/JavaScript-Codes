@@ -1,0 +1,1 @@
+document.write('from file 6.js')

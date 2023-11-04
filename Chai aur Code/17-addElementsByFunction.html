@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    document.querySelector('body').style.backgroundColor = 'grey';
+    document.querySelector('body').style.color = 'white';
+
+    let ul = document.createElement('ul')
+    ul.setAttribute('class','ul-list')
+    console.log(ul);
+    document.querySelector('body').appendChild(ul)
+
+    function addLang(langName){
+         let li = document.createElement('li')
+         li.innerHTML = langName
+         ul.appendChild(li)
+    }
+
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        // ul.appendChild(li)
+        document.querySelector('.ul-list').appendChild(li)
+    }
+
+    addLang('python')
+    addLang('java')
+    addLang('golang')
+
+    addOptiLang('typescript')
+
+    document.querySelector('li:last-child').remove()
+
+</script>
+</html>

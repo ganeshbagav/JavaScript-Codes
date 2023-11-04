@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>jay shree ram</h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const printThing = function (str) {
+      console.log(str, Date.now());
+    };
+    let interval = undefined;
+    const startInterval = function(){
+
+        interval = setInterval(printThing, 1000, "jay shree ram");
+    }
+
+    const stopInterval = function(){
+        clearInterval(interval);
+    }
+
+    document.querySelector('#start').addEventListener('click',startInterval)
+    document.querySelector('#stop').addEventListener('click',stopInterval)
+    // startInterval();
+  </script>
+</html>
